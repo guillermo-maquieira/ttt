@@ -26,6 +26,6 @@ Tic Tac Toe as a Service for eDreams ODIGEO.
 ```
 ![](https://raw.github.com/guillermo-maquieira/ttt/master/map.png)
 
-* Includes unit tests `tests/BoardTest.php`
+* Includes integration (API) tests `tests/BoardTest.php`
 
 * Using `phpcs` and `phpcbf` for coding improvements
