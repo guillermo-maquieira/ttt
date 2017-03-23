@@ -28,4 +28,11 @@ Tic Tac Toe as a Service for eDreams ODIGEO.
 
 * Includes integration (API) tests `tests/BoardTest.php`
 
-* Using `phpcs` and `phpcbf` for coding improvements
+* See `oop.php` for my (simple) class definition using `phpcs` and `phpcbf` for coding improvements
+```
+checkLine: Validates if a winner ('x'/'o') exists on a line (1 out of 3)
+checkColumn: Validates if a winner ('x'/'o') exists on a column (1 out of 3)
+checkDiagonal: Validates if a winner ('x'/'o') exists on a diagonal (1 out of 2)
+setWinner: Defines if 'x' or 'o' wins a game
+getWinner: Validates and prompts a game won message
+```
