@@ -44,14 +44,13 @@
 	</head><body>
 	<h1>Not Found (truncated...)
 	```
-	
+
 	* Code can be improved by using `phpcbf` after `phpcs` execution
 	```
 	FILE: ...llermo/lampstack-5.6.29-1/apache2/htdocs/ttt/tests/BoardTest.php
-	----------------------------------------------------------------------
+	
 	FOUND 18 ERRORS AFFECTING 15 LINES
-	----------------------------------------------------------------------
-	----------------------------------------------------------------------
+	
 	PHPCBF CAN FIX THE 9 MARKED SNIFF VIOLATIONS AUTOMATICALLY
-	----------------------------------------------------------------------
+	
 	```
