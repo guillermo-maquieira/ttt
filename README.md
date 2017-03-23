@@ -44,3 +44,44 @@ GuzzleHttp\Exception\ClientException: Client error: `GET http://tictactoe.com/bo
 </head><body>
 <h1>Not Found (truncated...)
 ```
+* Code can be improved by using `phpcbf` after `phpcs` execution
+
+FILE: ...llermo/lampstack-5.6.29-1/apache2/htdocs/ttt/tests/BoardTest.php
+----------------------------------------------------------------------
+FOUND 18 ERRORS AFFECTING 15 LINES
+----------------------------------------------------------------------
+  2 | ERROR | [ ] Missing file doc comment
+  3 | ERROR | [x] "require" is a statement not a function; no
+    |       |     parentheses are required
+  5 | ERROR | [ ] Missing class doc comment
+  9 | ERROR | [ ] Missing function doc comment
+ 11 | ERROR | [x] Opening parenthesis of a multi-line function call
+    |       |     must be the last content on the line
+ 13 | ERROR | [x] Closing parenthesis of a multi-line function call
+    |       |     must be on a line by itself
+ 16 | ERROR | [ ] Missing function doc comment
+ 16 | ERROR | [ ] Public method name
+    |       |     "BoardTest::testGet_ValidInput_BoardObject" is not
+    |       |     in camel caps format
+ 18 | ERROR | [x] Opening parenthesis of a multi-line function call
+    |       |     must be the last content on the line
+ 22 | ERROR | [x] Closing parenthesis of a multi-line function call
+    |       |     must be on a line by itself
+ 31 | ERROR | [ ] Missing function doc comment
+ 31 | ERROR | [ ] Public method name
+    |       |     "BoardTest::testPost_NewBoard_BoardObject" is not
+    |       |     in camel caps format
+ 35 | ERROR | [x] Opening parenthesis of a multi-line function call
+    |       |     must be the last content on the line
+ 39 | ERROR | [x] Closing parenthesis of a multi-line function call
+    |       |     must be on a line by itself
+ 48 | ERROR | [ ] Missing function doc comment
+ 48 | ERROR | [ ] Public method name "BoardTest::testDelete_Error" is
+    |       |     not in camel caps format
+ 50 | ERROR | [x] Opening parenthesis of a multi-line function call
+    |       |     must be the last content on the line
+ 52 | ERROR | [x] Closing parenthesis of a multi-line function call
+    |       |     must be on a line by itself
+----------------------------------------------------------------------
+PHPCBF CAN FIX THE 9 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+----------------------------------------------------------------------

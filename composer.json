@@ -3,8 +3,8 @@
         "propel/propel": "~2.0@dev"
     },
     "require-dev": {
-        "phpunit/phpunit-skeleton-generator": "*",
         "guzzlehttp/guzzle": "^6.1",
-        "phpunit/phpunit": "^5.0"
+        "phpunit/phpunit": "^5.0",
+        "squizlabs/php_codesniffer": "2.*"
     }
 }
