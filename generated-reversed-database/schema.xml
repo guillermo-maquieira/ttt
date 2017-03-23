@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<database name="default" defaultIdMethod="native" defaultPhpNamingMethod="underscore">
+  <table name="board" idMethod="native" phpName="Board">
+    <column name="id_board" phpName="IdBoard" type="INTEGER" primaryKey="true" required="true"/>
+    <column name="row" phpName="Row" type="INTEGER" size="1" primaryKey="true" required="true"/>
+    <column name="col" phpName="Col" type="INTEGER" size="1" primaryKey="true" required="true"/>
+    <column name="figure" phpName="Figure" type="VARCHAR" size="1"/>
+    <vendor type="mysql">
+      <parameter name="Engine" value="InnoDB"/>
+    </vendor>
+  </table>
+  <table name="board_has_figures" idMethod="native" phpName="BoardHasFigures">
+    <column name="board_id_board" phpName="BoardIdBoard" type="INTEGER" primaryKey="true" required="true"/>
+    <column name="figures_id_figure" phpName="FiguresIdFigure" type="INTEGER" primaryKey="true" required="true"/>
+    <foreign-key foreignTable="board" name="fk_board_has_figures_board1">
+      <reference local="board_id_board" foreign="id_board"/>
+    </foreign-key>
+    <foreign-key foreignTable="figures" name="fk_board_has_figures_figures1">
+      <reference local="figures_id_figure" foreign="id_figure"/>
+    </foreign-key>
+    <index name="fk_board_has_figures_figures1_idx">
+      <index-column name="figures_id_figure"/>
+    </index>
+    <index name="fk_board_has_figures_board1_idx">
+      <index-column name="board_id_board"/>
+    </index>
+    <vendor type="mysql">
+      <parameter name="Engine" value="InnoDB"/>
+    </vendor>
+  </table>
+  <table name="figures" idMethod="native" phpName="Figures">
+    <column name="id_figure" phpName="IdFigure" type="INTEGER" primaryKey="true" required="true"/>
+    <column name="figure" phpName="Figure" type="VARCHAR" size="1"/>
+    <vendor type="mysql">
+      <parameter name="Engine" value="InnoDB"/>
+    </vendor>
+  </table>
+  <table name="games" idMethod="native" phpName="Games">
+    <column name="id_game" phpName="IdGame" type="INTEGER" primaryKey="true" required="true"/>
+    <column name="created_at" phpName="CreatedAt" type="DATE"/>
+    <column name="last_updated" phpName="LastUpdated" type="DATE"/>
+    <column name="board_id_board" phpName="BoardIdBoard" type="INTEGER" required="true"/>
+    <foreign-key foreignTable="board" name="fk_games_board">
+      <reference local="board_id_board" foreign="id_board"/>
+    </foreign-key>
+    <index name="fk_games_board_idx">
+      <index-column name="board_id_board"/>
+    </index>
+    <vendor type="mysql">
+      <parameter name="Engine" value="InnoDB"/>
+    </vendor>
+  </table>
+  <table name="games_has_users" idMethod="native" phpName="GamesHasUsers">
+    <column name="games_id_game" phpName="GamesIdGame" type="INTEGER" primaryKey="true" required="true"/>
+    <column name="users_id_user" phpName="UsersIdUser" type="INTEGER" primaryKey="true" required="true"/>
+    <foreign-key foreignTable="games" name="fk_games_has_users_games1">
+      <reference local="games_id_game" foreign="id_game"/>
+    </foreign-key>
+    <foreign-key foreignTable="users" name="fk_games_has_users_users1">
+      <reference local="users_id_user" foreign="id_user"/>
+    </foreign-key>
+    <index name="fk_games_has_users_users1_idx">
+      <index-column name="users_id_user"/>
+    </index>
+    <index name="fk_games_has_users_games1_idx">
+      <index-column name="games_id_game"/>
+    </index>
+    <vendor type="mysql">
+      <parameter name="Engine" value="InnoDB"/>
+    </vendor>
+  </table>
+  <table name="users" idMethod="native" phpName="Users">
+    <column name="id_user" phpName="IdUser" type="INTEGER" primaryKey="true" required="true"/>
+    <column name="number" phpName="Number" type="VARCHAR" size="1"/>
+    <column name="first_name" phpName="FirstName" type="VARCHAR" size="50"/>
+    <column name="last_name" phpName="LastName" type="VARCHAR" size="50"/>
+    <column name="created_at" phpName="CreatedAt" type="DATE"/>
+    <column name="last_updated" phpName="LastUpdated" type="DATE"/>
+    <vendor type="mysql">
+      <parameter name="Engine" value="InnoDB"/>
+    </vendor>
+  </table>
+</database>
