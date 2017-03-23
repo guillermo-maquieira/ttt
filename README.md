@@ -26,4 +26,21 @@ Tic Tac Toe as a Service for eDreams ODIGEO.
 ```
 ![](https://raw.github.com/guillermo-maquieira/ttt/master/map.png)
 
-* Includes unit tests `tests/BoardTest.php` `tests/UsersTest.php` generated with PHP Storm
+* Includes unit test `tests/BoardTest.php` generated with Guzzle and PHP Unit
+```
+PHPUnit 5.7.17 by Sebastian Bergmann and contributors.
+
+EE.                                                                 3 / 3 (100%)
+
+Time: 1.12 seconds, Memory: 5.00MB
+
+There were 2 errors:
+
+1) BoardTest::testGet_ValidInput_BoardObject
+GuzzleHttp\Exception\ClientException: Client error: `GET http://tictactoe.com/board?id_board=1` resulted in a `404 Not Found` response:
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>404 Not Found</title>
+</head><body>
+<h1>Not Found (truncated...)
+```
