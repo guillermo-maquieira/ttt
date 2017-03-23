@@ -19,13 +19,11 @@
 	```
 	(2) vendor/bin/propel model:build --config-dir="/tmp/runtime-conf.xml" --schema-dir="generated-reversed-database/"
 	```
-
 	* [phUML](https://github.com/jakobwesthoff/phuml) for class diagrams (base and map) generation
 	```
 	./phuml -r /home/guillermo/lampstack-5.6.29-1/apache2/htdocs/ttt/generated-classes/Base/ -graphviz -createAssociations false -neato output_image.png
 	```
 	![](https://raw.github.com/guillermo-maquieira/ttt/master/map.png)
-
 	* Includes unit test `tests/BoardTest.php` generated with Guzzle and PHP Unit
 	```
 	PHPUnit 5.7.17 by Sebastian Bergmann and contributors.
@@ -44,7 +42,6 @@
 	</head><body>
 	<h1>Not Found (truncated...)
 	```
-
 	* Code can be improved by using `phpcbf` after `phpcs` execution
 	```
 	FILE: ...llermo/lampstack-5.6.29-1/apache2/htdocs/ttt/tests/BoardTest.php
@@ -52,5 +49,4 @@
 	FOUND 18 ERRORS AFFECTING 15 LINES
 	
 	PHPCBF CAN FIX THE 9 MARKED SNIFF VIOLATIONS AUTOMATICALLY
-	
 	```
