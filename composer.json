@@ -1,5 +1,8 @@
 {
     "require": {
         "propel/propel": "~2.0@dev"
+    },
+    "require-dev": {
+        "phpunit/phpunit-skeleton-generator": "*"
     }
 }
